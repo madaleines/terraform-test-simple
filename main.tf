@@ -12,8 +12,8 @@ terraform {
 
 resource "null_resource" "test" {}
 
-resource "null_resource" "test_2" {}
+variable "TFC_PROJECT_NAME" {}
 
-resource "null_resource" "test_3" {}
-
-resource "null_resource" "test_4" {}
+output "project_name_test" {
+  value = var.TFC_PROJECT_NAME
+}
